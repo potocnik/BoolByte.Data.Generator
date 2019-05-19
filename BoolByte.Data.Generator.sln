@@ -9,9 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D6A6070B-D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoolByte.Data.Generator.Core", "src\BoolByte.Data.Generator.Core\BoolByte.Data.Generator.Core.csproj", "{6DA030B2-2A91-4849-BA11-AA6A63E8F454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoolByte.Data.Generator.JsonSchema.AcceptanceTests", "test\BoolByte.Data.Generator.JsonSchema.AcceptanceTests\BoolByte.Data.Generator.JsonSchema.AcceptanceTests.csproj", "{DB904B28-369D-4BC9-AFF5-59E8BAED3873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoolByte.Data.Generator.JsonSchema.AcceptanceTests", "test\BoolByte.Data.Generator.JsonSchema.AcceptanceTests\BoolByte.Data.Generator.JsonSchema.AcceptanceTests.csproj", "{DB904B28-369D-4BC9-AFF5-59E8BAED3873}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoolByte.Data.Generator.JsonSchema", "src\BoolByte.Data.Generator.JsonSchema\BoolByte.Data.Generator.JsonSchema.csproj", "{B8FF289C-D5DE-49CE-B879-B661A86367B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoolByte.Data.Generator.JsonSchema", "src\BoolByte.Data.Generator.JsonSchema\BoolByte.Data.Generator.JsonSchema.csproj", "{B8FF289C-D5DE-49CE-B879-B661A86367B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{240B9281-20B8-408A-9701-EF7BA0752069}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

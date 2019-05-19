@@ -20,10 +20,44 @@ namespace BoolByte.Data.Generator.JsonSchema
             {
                 schema = await JsonSchema4.FromJsonAsync(streamReader.ReadToEnd());
             }
-            var type = typeof(T);
             return Enumerable
                 .Range(1, count)
-                .Select(number => Activator.CreateInstance(type) as T);
+                .Select(number => Generate(schema));
+        }
+
+        private T Generate(JsonSchema4 schema)
+        {
+            var type = typeof(T);
+            var instance = Activator.CreateInstance<T>();
+            schema.Properties.ToList().ForEach(schemaProperty =>
+            {
+                var propertyInfo = type.GetProperty(schemaProperty.Key);
+                if (schemaProperty.Value.IsRequired && !schemaProperty.Value.IsReadOnly)
+                {
+                    propertyInfo.SetValue(instance, Value(propertyInfo.PropertyType));
+                }
+            });
+            return instance;
+        }
+
+        private object Value(Type type)
+        {
+            switch (type.Name)
+            {
+                case "int":
+                case "Int32":
+                    return 1;
+                case "long":
+                case "Int64":
+                    return (long)1;
+                case "string":
+                case "String":
+                    return "sample";
+                case "DateTime":
+                    return DateTime.Now;
+                default:
+                    return null;
+            }
         }
     }
 }

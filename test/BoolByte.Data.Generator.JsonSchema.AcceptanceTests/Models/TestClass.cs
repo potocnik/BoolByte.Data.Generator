@@ -5,6 +5,7 @@ namespace BoolByte.Data.Generator.JsonSchema.AcceptanceTests.Models
 {
     public class TestClass
     {
+        [Required]
         [Range(1, int.MaxValue)]
         public long ItemId { get; set; }
         [Required]
